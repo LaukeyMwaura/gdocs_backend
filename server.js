@@ -9,7 +9,7 @@ mongoose.connect("mongodb://localhost/gdocs",
     useCreateIndex: true,
   });
 
-const io = require("socket.io")(3001, {
+const io = require("socket.io")("https://gdocs-vic.herokuapp.com/", {
   cors: {
     origin: "https://d-docs.netlify.app/",
     methods: ["GET", "POST"],
